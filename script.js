@@ -13,10 +13,10 @@ $(document).ready(function(){
   });
 });
 
-//save user input to local storage
+//save user click handler to savebtns
 $(".saveBtn").on("click", handleSave)
 
-//save blocks needs to be specific to each
+//run the function when save button is hit
 function handleSave(event){
   var value = $(this).siblings(".textarea").val();
   var key = $(this).siblings(".textarea").attr("id");
