@@ -1,35 +1,3 @@
-
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@Defy1x
-jolizaro /
-third-party-API-hw
-
-1
-0
-
-    0
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-
-    Insights
-
-third-party-API-hw/workday scheduler/assets/css/style.css
-@jolizaro
-jolizaro finished js code
-Latest commit e83123b 5 hours ago
-History
-1 contributor
-72 lines (60 sloc) 1.17 KB
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -43,6 +11,10 @@ body {
     color: #000000;
     border-left: 1px solid black;
     padding: 10px;
+  }
+
+  div {
+    margin-bottom: 2px;
   }
 
   .jumbotron {
@@ -94,6 +66,7 @@ body {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #06AED5;
+    padding: 20px;
     color: white;
   }
 
