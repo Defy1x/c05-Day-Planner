@@ -6,27 +6,26 @@ setColor();
 
 //runs first on page load
 $(document).ready(function(){
-  $('.time-block').each(function(){
-      var id = $(this).attr('data-hour');
+  $(".time-block").each(function(){
+      var id = $(this).attr("data-hour");
       var value = localStorage.getItem(id);
       $(this).val(value);
-      console.log(value);
   });
 });
 
 //save user input to local storage
-$('.saveBtn').on('click', function(){
-  $('.time-block').each(function(){
-      var id = $(this).attr('id');
+$(".saveBtn").on("click", function(){
+  $(".time-block").each(function(){
+      var id = $(this).attr("id");
       var value = $(this).val();
       localStorage.setItem(id, value);
   });
 });
 
 //clears the local storage
-$('#clearBtn').on('click', function(){
-  $('.time-block').each(function(){
-      $('.time-block .textarea').val('');
+$("#clearBtn").on("click", function(){
+  $(".time-block").each(function(){
+      $(".time-block .textarea").val("");
       var id = $(this).attr("id");
       var value = $(this).val();
       localStorage.setItem(id, value);
