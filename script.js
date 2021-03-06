@@ -6,30 +6,27 @@ setColor();
 
 //runs first on page load
 $(document).ready(function(){
-  $(".time-block").each(function(){
-      var id = $(this).attr("data-hour");
+  $(".textarea").each(function(){
+      var id = $(this).attr("id");
       var value = localStorage.getItem(id);
       $(this).val(value);
+      console.log(id)
   });
 });
 
 //save user input to local storage
-$(".saveBtn").on("click", function(){
-  $(".time-block").each(function(){
-      var id = $(this).attr("id");
-      var value = $(this).val();
-      localStorage.setItem(id, value);
-  });
-});
+$(".saveBtn").on("click", handleSave)
+
+//save blocks needs to be specific to each
+function handleSave(event){
+  var value = $(this).siblings(".textarea").val();
+  var key = $(this).siblings(".textarea").attr("id");
+  localStorage.setItem(key, value);
+}
 
 //clears the local storage
 $("#clearBtn").on("click", function(){
-  $(".time-block").each(function(){
-      $(".time-block .textarea").val("");
-      var id = $(this).attr("id");
-      var value = $(this).val();
-      localStorage.setItem(id, value);
-  });
+  localStorage.clear();
 });
 
 //set the color of the blocks
