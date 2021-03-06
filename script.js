@@ -10,7 +10,6 @@ $(document).ready(function(){
       var id = $(this).attr("id");
       var value = localStorage.getItem(id);
       $(this).val(value);
-      console.log(id)
   });
 });
 
@@ -24,8 +23,9 @@ function handleSave(event){
   localStorage.setItem(key, value);
 }
 
-//clears the local storage
+//clears the local storage and reset value
 $("#clearBtn").on("click", function(){
+  $(".textarea").val("");
   localStorage.clear();
 });
 
